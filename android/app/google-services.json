@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "394612856977",
+    "project_id": "pertemuan8-92066",
+    "storage_bucket": "pertemuan8-92066.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394612856977:android:1df2d9f9df83b4c0854730",
+        "android_client_info": {
+          "package_name": "com.contoh1.myApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrdVMKpTDPQXJkymti0eeHhJ6731NgTbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394612856977:android:32aa3d2b768937d5854730",
+        "android_client_info": {
+          "package_name": "com.example.pert_8"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrdVMKpTDPQXJkymti0eeHhJ6731NgTbU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
