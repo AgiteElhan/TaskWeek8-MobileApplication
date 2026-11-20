@@ -161,7 +161,64 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 8),
 
 
-                
+                 const Text(
+                  'Password',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
+                ),
+
+                const SizedBox(height: 8),
+
+                TextFormField(
+                  controller: passwordController,
+
+                  obscureText: isPasswordHidden,
+
+                  decoration: InputDecoration(
+                    hintText: 'Masukkan Password',
+
+                    prefixIcon: const Icon(
+                      Icons.lock,
+                      color: Colors.blue,
+                    ),
+
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        isPasswordHidden
+                            ? Icons.visibility_off
+                            : Icons.visibility,
+                      ),
+
+                      onPressed: () {
+                        setState(() {
+                          isPasswordHidden = !isPasswordHidden;
+                        });
+                      },
+                    ),
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Password Tidak Boleh Kosong!!';
+                    }
+
+                    if (value.length < 6) {
+                      return 'Password Minimal 6 karakter';
+                    }
+
+                    return null;
+                  },
+                ),
+
+              
+
 
               ],
             ),
