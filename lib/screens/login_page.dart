@@ -78,10 +78,96 @@ class _LoginPageState extends State<LoginPage> {
       }
     }
   }
-
+  @override
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24),
+          child: Form(
+            key: formKey,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Icon(
+                  Icons.account_circle,
+                  size: 80,
+                  color: Colors.blue,
+                ),
+
+                const SizedBox(height: 14),
+
+                const Text(
+                  'LOGIN FIREBASE ',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                const SizedBox(height: 40),
+                 const Text(
+                  'Email',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
+                ),
+
+                const SizedBox(height: 8),
+
+                TextFormField(
+                  controller: emailController,
+
+                  keyboardType: TextInputType.emailAddress,
+
+                  decoration: InputDecoration(
+                    hintText: 'Masukkan Alamat Email',
+
+                    prefixIcon: const Icon(
+                      Icons.email,
+                      color: Colors.blue,
+                    ),
+
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Email Tidak Boleh Kosong!!';
+                    }
+
+                    if (!value.contains('@') ||
+                        !value.contains('.')) {
+                      return 'Masukkan Email valid!!';
+                    }
+
+                    return null;
+                  },
+                ),
+
+                const SizedBox(height: 8),
+
+
+                
+
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }
