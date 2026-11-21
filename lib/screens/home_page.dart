@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-
+import 'package:pert_8/widget/info_row.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,7 +26,34 @@ class HomePage extends StatelessWidget {
             ),
             child: Padding(
               padding: const EdgeInsets.all(24),
-              child: Column(),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CircleAvatar(
+                    radius: 60,
+                    backgroundColor: Colors.blue,
+                    backgroundImage: user?.photoURL !=null? NetworkImage(
+                      user!.photoURL!
+                    ): null,
+                    child: user?.photoURL == null
+                      ? const Icon(
+                          Icons.person,
+                          size: 65,
+                          color: Colors.blue,
+                        )
+                      : null,
+                  ),
+                  const SizedBox(height: 20,),
+                  Text(
+                    user?.displayName ?? 'Nama Belum diatur',
+                    style: const TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  
+                ],
+              ),
             ),
           ),
         ),
