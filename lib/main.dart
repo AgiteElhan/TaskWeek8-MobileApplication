@@ -31,7 +31,7 @@ class _MyApp extends State<MyApp> {
 
       routes: {
         '/': (context)=> LoginPage(),
-        // '/home' :(context)=> HomePage()
+        '/home' :(context)=> HomePage()
       },
     );
   }

@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:pert_8/screens/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -35,7 +36,7 @@ class _LoginPageState extends State<LoginPage> {
       );
       if (!mounted)return;
 
-      // Navigator.pushReplacementNamed(context, /home)
+      Navigator.pushReplacementNamed(context, '/home');
     } on FirebaseAuthException catch (e) {
       String message = 'Login Gagal!!';
 
