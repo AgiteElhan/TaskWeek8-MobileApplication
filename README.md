@@ -1,17 +1,32 @@
-# pert_8
+# Profile App
 
-A new Flutter project.
+Profile App merupakan aplikasi mobile sederhana yang dibuat menggunakan Flutter dan Firebase. Aplikasi ini memiliki fitur login menggunakan email dan password yang terhubung dengan Firebase Authentication.
 
-## Getting Started
+Setelah berhasil login, pengguna akan diarahkan ke halaman Home yang menampilkan informasi profil seperti nama, foto profil, email, User ID, dan waktu terakhir login.
 
-This project is a starting point for a Flutter application.
+Aplikasi ini juga dilengkapi dengan fitur validasi email dan password, tampilkan/sembunyikan password, serta logout.
 
-A few resources to get you started if this is your first Flutter project:
+## Teknologi yang Digunakan
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter
+- Dart
+- Firebase Core
+- Firebase Authentication
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Fitur Aplikasi
+
+- Login menggunakan Email dan Password.
+- Menampilkan nama dan foto profil pengguna.
+- Menampilkan email dan User ID.
+- Menampilkan waktu terakhir login.
+- Logout dari akun.
+
+## Tampilan Aplikasi
+
+![Halaman Login](assets/login.png)
+![Halaman Home](assets/home.png)
+
+
+## Developer
+
+**Agit Elhandinnata**
