@@ -1,4 +1,4 @@
-# Profile App
+# Tugas WEEK 8
 
 Profile App merupakan aplikasi mobile sederhana yang dibuat menggunakan Flutter dan Firebase. Aplikasi ini memiliki fitur login menggunakan email dan password yang terhubung dengan Firebase Authentication.
 
@@ -28,6 +28,4 @@ Aplikasi ini juga dilengkapi dengan fitur validasi email dan password, tampilkan
 ![Halaman Home](assets/home.png)
 
 
-## Developer
 
-**Agit Elhandinnata**
