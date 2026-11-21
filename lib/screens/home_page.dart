@@ -73,6 +73,32 @@ class HomePage extends StatelessWidget {
                               .toString() 
                             : ' tidak tersedia'
                   ),
+                  const SizedBox(height: 25,),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 48,
+                    child: ElevatedButton.icon(
+                      onPressed: () async {
+                        await FirebaseAuth.instance.signOut();
+                        if (!context.mounted) return;
+                        Navigator.pushNamedAndRemoveUntil(
+                          context, 
+                          '/', 
+                          (route)=>false
+                          );
+                        },
+                        icon: const Icon(Icons.logout),
+                        label: const Text('LOGOUT'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.red,
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadiusGeometry.circular(12)
+                          )
+                          
+                        ),
+                    ),
+                  )
                 ],
               ),
             ),
