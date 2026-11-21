@@ -22,8 +22,9 @@ Aplikasi ini juga dilengkapi dengan fitur validasi email dan password, tampilkan
 - Logout dari akun.
 
 ## Tampilan Aplikasi
-
+### 1. Halaman Login
 ![Halaman Login](assets/login.png)
+### 2. Halaman Home Page
 ![Halaman Home](assets/home.png)
 
 
