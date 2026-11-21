@@ -51,7 +51,28 @@ class HomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold
                     ),
                   ),
-                  
+                  const SizedBox(height: 20,),
+                  InfoRow(
+                    ikon: Icons.email, 
+                    label: 'Email', 
+                    value: user?.email ?? 'Email tidak tersedia'
+                  ),
+                  const SizedBox(height: 10,),
+                  InfoRow(
+                    ikon: Icons.fingerprint, 
+                    label: 'User ID', 
+                    value: user?.uid ?? 'User id tidak tersedia'
+                  ),
+                  const SizedBox(height: 10,),
+                  InfoRow(
+                    ikon: Icons.access_time, 
+                    label: 'Last Login', 
+                    value: user?.metadata.lastSignInTime !=null 
+                            ? user!.metadata.lastSignInTime! 
+                              .toLocal()
+                              .toString() 
+                            : ' tidak tersedia'
+                  ),
                 ],
               ),
             ),
